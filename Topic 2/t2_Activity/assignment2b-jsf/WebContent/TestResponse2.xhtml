@@ -1,0 +1,29 @@
+<!--
+  Author: Brydon Johnson
+  Date: 2/21/21
+  Class: CST-235
+  Statement: This work is my own.
+ -->
+
+<!DOCTYPE html>
+
+<html lang="en"
+		xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+		xmlns:f="http://java.sun.com/jsf/core"
+		xmlns:h="http://xmlns.jcp.org/jsf/html"
+		 >
+
+<h:head>
+  <title>JSF Response Page 2</title>
+</h:head>
+
+<h:body>
+
+	<h1>Response Page</h1>
+	<p>FirstName: </p>
+	<h:outputText value="#{flash.user.firstname}" />
+	<p>LastName: </p>
+	<h:outputText value="#{flash.user.lastname}" />
+</h:body>
+</html>
