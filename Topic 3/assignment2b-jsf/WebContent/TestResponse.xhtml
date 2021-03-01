@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      >
+      
+<!--
+  Author: Brydon Johnson
+  Date: 02/28/2021
+  Class: CST-235
+ -->
+
+<h:body>
+	
+	<ui:composition template="/layouts/commonLayout.xhtml">
+		<!-- Define the content of the web page -->
+		<ui:define name="content">
+			<p>the first name is: #{user.firstname}</p>
+			<p>the first name is: #{user.lastname}</p>
+			
+			<h:dataTable value="#{orders.orders}" 
+			var="o" 
+			styleClass="order-table" 
+			headerClass="order-table-header" 
+			rowClasses="order-table-odd, order-table-even">
+				<h:column>
+					<f:facet name="header">Order Number</f:facet>
+					<h:outputText value="#{o.orderNo}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">Product Name</f:facet>
+					<h:outputText value="#{o.productName}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">Price</f:facet>
+					<h:outputText value="#{o.price}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">Quantity</f:facet>
+					<h:outputText value="#{o.quantity}" />
+				</h:column>
+			</h:dataTable>
+			
+		</ui:define>
+	</ui:composition>
+
+</h:body>
+</html>
