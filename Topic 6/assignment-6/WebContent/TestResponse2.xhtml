@@ -1,0 +1,24 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+	<title>JSF Response Page</title>
+</h:head> 
+<body> 
+	<ui:composition template="/layouts/commonLayout.xhtml">
+		<ui:define name="content">
+			<label>First Name: </label>
+			<h:outputText id="firstname" value="#{flash.User.firstName}"/>
+			<br />
+			<label>Last Name: </label>
+			<h:outputText id="lastname" value="#{flash.User.lastName}" />
+			<br />
+			<h:button value="back" outcome="TestForm.jsf" />
+		</ui:define>
+	</ui:composition>
+</body> 
+</html>

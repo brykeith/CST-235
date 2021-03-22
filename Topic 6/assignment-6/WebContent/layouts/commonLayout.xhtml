@@ -1,0 +1,28 @@
+<!--
+  Author: Brydon Johnson
+  Date: 3/11/2021
+  Class: CST235
+ -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+	<h:outputStylesheet library="css" name="style.css" target="head"></h:outputStylesheet>
+</h:head> 
+<body>
+	<!-- inserts the partial components of the page into this standard page layout -->
+	<ui:insert name="header">
+		<ui:include src="/layouts/commonHeader.xhtml"></ui:include>
+	</ui:insert>
+	<ui:insert name="content">
+		<ui:include src="layouts/commonContent.xhtml"></ui:include>
+	</ui:insert>
+	<ui:insert name="footer">
+		<ui:include src="/layouts/commonFooter.xhtml"></ui:include>
+	</ui:insert>
+</body>
+</html>
