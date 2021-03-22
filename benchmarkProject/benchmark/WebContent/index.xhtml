@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+  <link href="styles.css" rel="stylesheet" />
+</h:head> 
+<body> 
+<div class="content">
+<h1>WELCOME TO BIBLE WORD COUNTER</h1>
+	<h:form>
+		<h:outputLabel value="Enter a word." />
+		<br />
+		<h:outputLabel value="Word: " />
+		<h:inputText value="#{word.word}"/>
+		<br />
+		<h:commandButton action="#{formController.findWord(word)}" value="Search" />
+	</h:form>
+		<ui:fragment rendered="#{word.occurences > -1}">
+			<h:outputLabel value="The number of occurences of the word #{word.word} is #{word.occurences} in the Bible" />
+		</ui:fragment>
+		<ui:fragment rendered="#{(word.word != null and word.occurences == -1)}" >
+			<h:outputLabel value= "There was an error processing your request. Please try again later." />
+		</ui:fragment>
+		</div>
+</body> 
+</html>
